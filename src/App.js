@@ -1,16 +1,21 @@
 import { useReducer } from 'react';
 import './App.css';
-import ToDoList from './Components/ToDoList';
-import FormRedux from './Components/FormRedux';
-
+import {Route, Routes } from 'react-router-dom';
+import { Layout } from './Components/Layout';
+import {TareasCompletadas} from "./Pages/TareasCompletadas"
+import Home from "./Pages/Home"
 
 function App() {
   return (
-    <div className="App">
-      <FormRedux/>
-      <ToDoList/>
+    <div className="App"> 
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+         <Route index element = {<Home/>}/>
+         <Route path='completadas' element= {<TareasCompletadas/>} />
+        </Route>
+      </Routes> 
     </div>
-  );
+  ); 
 }
 
 export default App;
