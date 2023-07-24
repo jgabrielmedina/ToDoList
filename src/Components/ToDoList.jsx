@@ -2,6 +2,8 @@
  import { useDispatch } from "react-redux";
  import {removeTaskR} from "../Reducers/taskSlice";
  import { completeTaskR } from "../Reducers/taskSlice";
+ import { ordernarTasks } from "../Reducers/taskSlice";
+ import {AiOutlineArrowDown} from 'react-icons/ai';
  
  
  function ToDoList (){
@@ -14,15 +16,25 @@
     return(
         <>
         <h5>Listado de tareas</h5>
-        <ol>
+
+        <button className="buttonPriority" onClick={()=> dispatch(ordernarTasks())} > Prioridad <AiOutlineArrowDown/></button>
+        <ol className="oList">
         {tasks.map((todo)=>{    
             return (
                 <li key={todo.date}>   
-                <div>
-                    {todo.title} - {todo.date} - {todo.priority}
-                   <button onClick={()=> dispatch(removeTaskR(todo.date))} >Eliminar</button>
-                   <button onClick={()=> dispatch(completeTaskR(todo))} >Completado</button>
+                <div className="mainconteiner">
+                    <div className="left-mainconteiner">
+                    <p className="title-left-mainconteiner"> {todo.title} </p>
+                    <p className="date-left-mainconteiner"> {todo.date} </p>
+                    </div>
+                    <div className="right-mainconteiner">
+                    <p> {todo.priority}</p>
+                    </div>
+                    
                 </div>
+                
+                <button  onClick={()=> dispatch(removeTaskR(todo.date))} >Eliminar</button>
+                   <button onClick={()=> dispatch(completeTaskR(todo))} >Completado</button>
                 </li>
             )  
         })}
