@@ -5,6 +5,7 @@ import { completeTaskR } from "../Reducers/taskSlice";
 import { ordernarTasks } from "../Reducers/taskSlice";
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { Anchor } from "./StyledComponents";
+import { Boton } from "./StyledComponents";
 import { ThemeProvider } from "styled-components";
 
 
@@ -32,6 +33,7 @@ function ToDoList() {
 
 return (
         <>
+        <div>
             <h5>Listado de tareas</h5>
 
             <button className="buttonPriority" onClick={() => dispatch(ordernarTasks())} > Prioridad <AiOutlineArrowDown /></button>
@@ -54,14 +56,18 @@ return (
                                     <p>{todo.priority}</p>
                                 </div>
                             </Anchor>
+                           
+                            <Boton onClick={() => dispatch(removeTaskR(todo.date))} className="boton" >Eliminar</Boton>
+                            <Boton onClick={() => dispatch(completeTaskR(todo))} className="boton" >Completado</Boton>
                             </ThemeProvider>
-                            <button onClick={() => dispatch(removeTaskR(todo.date))} >Eliminar</button>
-                            <button onClick={() => dispatch(completeTaskR(todo))} >Completado</button>
+                           
                         </li>
 
                     )
                 })}
             </ol>
+
+            </div>
         </>
     )
 }

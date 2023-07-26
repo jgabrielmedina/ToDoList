@@ -27,21 +27,22 @@ function FormRedux() {
     return (
         <>
 
-
-            <form onSubmit={e => submitHandler(e)}>
-                <input type="text" onChange={e => setInputText(e.currentTarget.value)} />
+<div>
+            <form onSubmit={e => submitHandler(e)} className="formulario">
+                <input type="text" onChange={e => setInputText(e.currentTarget.value)} placeholder="Añadir tarea" className="inputForm"/>
 
                 <br />
 
-                 <span>Prioridad:</span>
-                <select name="priority" id="priority" ref={priority}>
+                <label htmlFor="priority" className="labelForm" >Prioridad:</label>
+                <select name="priority" id="priority" className="selectForm" ref={priority}>
                     <option value="alta">Alta</option>
                     <option value="media">Media</option>
                     <option value="baja">Baja</option>
-                </select> 
-                <button type="submit">Agregar</button>
+                </select> <br />
+                <button type="submit" className="buttonForm" >Agregar</button>
 
             </form>
+            </div>
         </>
     )
 }
