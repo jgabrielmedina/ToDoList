@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import './App.css';
+import './Components/ToDoList.css'
 import {Route, Routes } from 'react-router-dom';
 import { Layout } from './Components/Layout';
 import {TareasCompletadas} from "./Pages/TareasCompletadas"
