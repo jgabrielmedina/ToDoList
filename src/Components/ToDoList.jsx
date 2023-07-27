@@ -16,13 +16,13 @@ function ToDoList() {
     const dispatch = useDispatch();
 
  const HighTheme = {
-    backgroundColor : "#D64F4F"
+    backgroundColor : "#9D352B "
   }
  const MediumTheme = {
-    backgroundColor : "#DFD711"
+    backgroundColor : "#B49F3A"
   }
  const LowTheme = {
-    backgroundColor : "#51DFC1"
+    backgroundColor : "#457078"
   }
 
  const priorityColors = {
@@ -33,7 +33,7 @@ function ToDoList() {
 
 return (
         <>
-        <div>
+        <div className="main">
             <h5>Listado de tareas</h5>
 
             <button className="buttonPriority" onClick={() => dispatch(ordernarTasks())} > Prioridad <AiOutlineArrowDown /></button>

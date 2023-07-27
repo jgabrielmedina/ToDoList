@@ -4,12 +4,11 @@ import {Outlet, Link } from "react-router-dom"
 export const Layout = ( ) => {
     return(
         <>
-              <div>
-              <Link to="/">Home</Link>
-              <Link to="/completadas">Tareas completadas</Link>
-              <Outlet/>
+              <div className="header">
+                <div><Link to="/">Home</Link></div>
+              <div>   <Link to="/completadas">Tareas completadas</Link></div>
               </div>
-              
+              <Outlet/>
         </>
     )
 }
