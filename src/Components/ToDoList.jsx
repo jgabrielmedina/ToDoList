@@ -34,7 +34,7 @@ function ToDoList() {
 return (
         <>
         <div className="main">
-            <h5>Listado de tareas</h5>
+            <h5 className="mainTitle">Listado de tareas</h5>
 
             <button className="buttonPriority" onClick={() => dispatch(ordernarTasks())} > Prioridad <AiOutlineArrowDown /></button>
 

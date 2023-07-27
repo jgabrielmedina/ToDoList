@@ -21,6 +21,10 @@ export const taskSlice = createSlice({
             state.totalCount -= 1;
             state.tasks = state.tasks.filter(task => task.date !== action.payload)
         },
+        removeTaskCompleteR: (state, action)=>{
+            
+            state.completeTasks = state.completeTasks.filter(completeTasks => completeTasks.date !== action.payload)
+        },
         completeTaskR: (state, action)=>{
             state.totalCount = state.totalCount -= 1;
             state.completeTasks = [...state.completeTasks, action.payload]
@@ -43,6 +47,6 @@ export const taskSlice = createSlice({
     }
 })
 
-export const {addTaskR, removeTaskR, completeTaskR, ordernarTasks} = taskSlice.actions; 
+export const {addTaskR, removeTaskR, completeTaskR, ordernarTasks, removeTaskCompleteR} = taskSlice.actions; 
 
 export default taskSlice.reducer; //unificacion de todos los reducers que tengo

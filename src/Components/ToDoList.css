@@ -13,9 +13,20 @@ body {
   padding: unset;
 }
 
+.completeOList{
+  width: 95%;
+    margin: auto;
+}
+
 .main {
   width: 95%;
   margin: auto;
+}
+
+.mainTitle{
+  padding-left: 7px;
+    color: black;
+    opacity: 0.4;
 }
 
 .mainconteiner {
