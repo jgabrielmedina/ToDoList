@@ -4,7 +4,7 @@ import FormRedux from '../Components/FormRedux';
 export const Home = () =>{
  return(
     <>
-    <div>
+    <div className='wrappedContainer'>
     <FormRedux/>
     <ToDoList/>
     </div>

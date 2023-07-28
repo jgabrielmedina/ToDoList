@@ -92,3 +92,28 @@ body {
 .buttonPriority:hover {
   border-bottom: 2px solid silver;
 }
+
+
+@media screen and (min-width: 768px) {
+
+.wrappedContainer{
+    display: flex;
+    align-items: center;
+
+}
+
+.wrappedContainer div{
+  width: 50%;
+}
+
+.wrappedContainer .main{
+   width: 50%;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 82vh;
+}
+
+.oList{
+  width: 90vw;
+}
+}
