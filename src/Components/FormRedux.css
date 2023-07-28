@@ -8,24 +8,24 @@
 }
 
 .inputForm{
-    border: 1px solid cornflowerblue;
+    border: 1px solid #457078;
     /* padding-bottom: 31px; */
     margin-bottom: 10px;
 }
 
 .labelForm{
-    color: cornflowerblue;
+    color: #457078;
 }
 
 .selectForm{
-    color: cornflowerblue;
-    border: 1px solid cornflowerblue;
+    color: #457078;
+    border: 1px solid #457078;
 }
 
 .buttonForm{
     background-color: white;
-    color: cornflowerblue;
-    border: 1px solid cornflowerblue;
+    color:#457078;
+    border: 1px solid #457078;
     margin-top: 10px;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .header a {
-    color: cornflowerblue;
+    color: #457078;
     text-decoration: none;
     padding-bottom: 0.3px;
 }
